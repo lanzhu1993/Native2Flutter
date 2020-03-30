@@ -1,0 +1,9 @@
+rootProject.name='NativeFlutter'
+include ':app'
+setBinding(new Binding([gradle:this]))
+
+//配置flutter-module gradle 路径
+def includeFlutterFilePath = "../NativeFlutter/flutter_module/.android/include_flutter.groovy"
+evaluate(new File(includeFlutterFilePath))
+
+include ':flutter_module'
